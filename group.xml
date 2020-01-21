@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regretion Testing Suite" verbose="1" parallel="false">
+
+    <test name="Test">
+        <groups>
+            <run>
+                <include name="add"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.lits.borysov.calculator"></package>
+        </packages>
+    </test>
+</suite>

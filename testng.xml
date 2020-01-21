@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regretion Testing Suite" verbose="1" parallel="false">
+    <!--    <listeners>-->
+    <!--        <listener class-name=""/>-->
+    <!--    </listeners>-->
+    <test name="Calculator Test">
+       <packages>
+           <package name="com.lits.borysov.calculator"></package>
+       </packages>
+    </test>
+
+    <test name="App Test">
+        <packages>
+            <package name="com.lits.borysov.app"></package>
+        </packages>
+    </test>
+</suite>
