@@ -1,4 +1,4 @@
-package com.lits.borysov.restApi;
+package com.lits.borysov.assignment.Models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -8,7 +8,7 @@ public class UserModel {
     UserData r;
 
     @Data
-    class UserData {
+    public static class UserData {
         @JsonProperty("access_token")
         private String access_token;
 
@@ -20,6 +20,22 @@ public class UserModel {
 
         @JsonProperty("token_type")
         private String token_type;
+    }
+
+    @Data
+    public static class UserInfoModel {
+
+        @JsonProperty("firstName")
+        private String firstName;
+
+        @JsonProperty("lastName")
+        private String lastName;
+
+        @JsonProperty("email")
+        private String email;
+
+        @JsonProperty("id")
+        private String id;
     }
 }
 
