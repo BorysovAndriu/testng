@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="UI Testing Suite" verbose="1" parallel="false">
+
+    <test name="Test Coin">
+        <classes>
+            <class name="com.lits.borysov.UI.HomeWorkUI.TestRandomCoinFlipper"></class>
+        </classes>
+    </test>
+
+    <test name="Test Login Gmail">
+        <classes>
+            <class name="com.lits.borysov.UI.HomeWorkUI.TestLoginEmail"></class>
+        </classes>
+    </test>
+
+    <test name="Test Login LITS">
+        <classes>
+            <class name="com.lits.borysov.UI.HomeWorkUI.TestLoginLits"></class>
+        </classes>
+    </test>
+</suite>

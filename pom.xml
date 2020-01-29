@@ -46,6 +46,13 @@
       <artifactId>jackson-databind</artifactId>
       <version>2.10.1</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.0.0-alpha-4</version>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -263,6 +270,30 @@
       </build>
     </profile>
 
+    <profile>
+      <id>UI</id>
+      <activation>
+        <property>
+          <name>testGroup</name>
+          <value>ui</value>
+        </property>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M4</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>uiSuit.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
 
   </profiles>
 </project>
