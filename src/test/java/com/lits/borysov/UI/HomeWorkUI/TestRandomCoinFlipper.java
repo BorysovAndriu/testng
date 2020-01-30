@@ -39,6 +39,8 @@ public class TestRandomCoinFlipper extends TestBase{
         //Verify count coins
         Assert.assertEquals(randomPage.countSearchCoin.getText(),textCountCoin);
         Assert.assertEquals(randomPage.obverseImgList.size() + randomPage.reverseImgList.size(),200);
+        System.out.println("Count obverse: " + randomPage.obverseImgList.size());
+        System.out.println("Count reverse: " + randomPage.reverseImgList.size());
 
         //Go Back and reset form
         randomPage.buttonGoBack.click();
