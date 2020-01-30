@@ -39,6 +39,10 @@ public class TestRandomCoinFlipper extends TestBase{
         //Verify count coins
         Assert.assertEquals(randomPage.countSearchCoin.getText(),textCountCoin);
         Assert.assertEquals(randomPage.obverseImgList.size() + randomPage.reverseImgList.size(),200);
+        double percentObverse = ((double)randomPage.obverseImgList.size()/200)*100;
+        double percentReverse = ((double)randomPage.reverseImgList.size()/200)*100;
+        Assert.assertTrue((percentReverse - percentObverse)<10);
+        System.out.println(percentObverse + "percent Obverse " + percentReverse + " percent Reverse");
         System.out.println("Count obverse: " + randomPage.obverseImgList.size());
         System.out.println("Count reverse: " + randomPage.reverseImgList.size());
 
@@ -60,5 +64,7 @@ public class TestRandomCoinFlipper extends TestBase{
         //Verify count coins
         Assert.assertEquals(randomPage.countSearchCoin.getText(),textCountCoin2);
         Assert.assertEquals(randomPage.obverseImgList.size() + randomPage.reverseImgList.size(),2);
+        System.out.println("Count obverse: " + randomPage.obverseImgList.size());
+        System.out.println("Count reverse: " + randomPage.reverseImgList.size());
     }
 }
